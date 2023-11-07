@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>file repository</title>
     <style>
+        * {
+          box-sizing: border-box;
+        }
         table {
           font-family: arial, sans-serif;
           border-collapse: collapse;
@@ -31,22 +34,59 @@
           height: auto;
           width: auto;
         }
-        .center {
-          display: block;
-          margin-left: 30%;
-          margin-right: 30%;
-          width: 40%;
-          padding: 10px;
+
+        .column {
+          float: left;
+          width: 50%;
+          padding: 5px;
+          
         }
+
+        /* Clear floats after image containers */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .image-description {
+          text-align: center;
+          border: 1px solid #008772;
+          background-color: #008772;
+          /* padding: 5px; */
+          font-family: arial, sans-serif;
+          border-radius: 15px 15px 0px 0px;
+          color: #fff;
+          font-size: 25px;
+        }
+
     </style>
   </head>
   <body>
-    <h1></h1>
-    <div class="center">
+    <!-- <div class="center">
       <a href="https://drive.google.com/file/d/1AMBZw1BGmJdIM9O8m4MOQEV4Kq1RL7Le/view?usp=sharing">
         <img class="island" src="img/island2.jpg" alt="Italian Trulli" align="middle">
       </a>
+      <img class="island" src="img/island-north.png" alt="Italian Trulli" align="middle">
+    </div> -->
+
+    <div class="row">
+      <div class="column">
+        <div class="image-description">
+          <p>South Part</p>
+        </div>
+        <a href="https://drive.google.com/file/d/1AMBZw1BGmJdIM9O8m4MOQEV4Kq1RL7Le/view?usp=sharing">
+          <img src="img/island2.jpg" alt="Forest" style="width:100%">
+        </a>
+      </div>
+      <div class="column">
+        <div class="image-description">
+          <p>North Part</p>
+        </div>
+        <img src="img/island-north.png" alt="Forest" style="width:100%">
+      </div>
     </div>
+
     <table>
         <tr>
             <th>Thumbnail</th>
