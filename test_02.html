@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>file repository</title>
+    <style>
+        body {
+        font-family: 'Source Sans Pro', sans-serif;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        }
+
+        svg {
+        width: 90vw;
+        height: auto;
+        }
+
+        text {
+        font-size: 24px;
+        fill: white;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        user-select: none;
+        pointer-events: none;
+        
+        }
+
+        #strokeGroup circle {
+        cursor: pointer;
+        stroke: white;
+        stroke-width: 4;
+        fill: transparent;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
+  </head>
+<body>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="theClipPath"></clipPath>
+    </defs>
+    <g id="baseGroup" clip-path="url(#theClipPath)"></g>
+    <g id="strokeGroup"></g>
+    <g id="numbersGroup"></g>
+  </svg>
+  <script>
+        console.clear();
+        const svg = document.querySelector("svg");
+        const svgns = "http://www.w3.org/2000/svg";
+        const baseGroup = document.querySelector("#baseGroup");
+        const clipPathGroup = document.querySelector("#theClipPath");
+        const strokeGroup = document.querySelector("#strokeGroup");
+        const numbersGroup = document.querySelector("#numbersGroup");
+        const anims = [];
+
+        // change any of these values
+        const circles = 6;
+        const radius = 60;
+        const spacing = 12; // this will be the space between circles
+        const colorArray = ["#829FD9", "#BABF2A", "#735702", "#027368"];
+        let counter = 0;
+
+        // figure the new svg width/height
+        const svgWidth = radius * 2 * circles + (circles - 1) * spacing;
+        const svgHeight = radius * 2;
+
+        gsap.set(svg, {
+        attr: {
+            width: svgWidth,
+            height: svgHeight,
+            viewBox: "0 0 " + svgWidth + " " + svgHeight
+        }
+        });
+
+        for (let i = 0; i < circles; i++) {
+            counter++;
+
+            let newX = (radius * 2 + spacing) * i + radius;
+            // make the base circle hidden in the clipPath
+            let newCirc = document.createElementNS(svgns, "circle");
+            gsap.set(newCirc, {
+                attr: {
+                cy: radius,
+                cx: newX,
+                r: radius,
+                fill: colorArray[counter % colorArray.length]
+                }
+            });
+            baseGroup.appendChild(newCirc);
+
+            // make the stroked circle
+            let newStroke = document.createElementNS(svgns, "circle");
+            gsap.set(newStroke, {
+                attr: {
+                cy: radius,
+                cx: newX,
+                r: radius - 2
+                }
+            });
+            strokeGroup.appendChild(newStroke);
+            newStroke.index = i;
+            newStroke.addEventListener("click", animateClip);
+
+            // make the rectangles for the clip-paths
+            let newRect = document.createElementNS(svgns, "rect");
+            clipPathGroup.appendChild(newRect);
+
+            gsap.set(newRect, {
+                attr: {
+                x: newX - radius,
+                y: 0,
+                width: radius * 2,
+                height: radius * 2,
+                }
+            });
+            let tween = gsap
+                .from(newRect, { yPercent: 100, ease: "sine.inOut" })
+                .reversed(true);
+            anims.push(tween);
+            
+            // create the text element and append it to its own group
+            let txt = document.createElementNS(svgns, "text");
+            txt.textContent = counter;
+            numbersGroup.appendChild(txt);
+            gsap.set(txt, {
+                attr: {
+                x: newX,
+                y: radius
+                }
+            });
+        }
+
+    function animateClip() {
+      anims[this.index].reversed(!anims[this.index].reversed());
+    }
+  </script>
+
+</body>

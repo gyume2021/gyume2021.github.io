@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>file repository</title>
+    <style>
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      svg {
+        width: 90vw;
+        height: auto;
+      }
+
+      text {
+        font-size: 24px;
+        fill: white;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
+  </head>
+  <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="theClipPath"></clipPath>
+      </defs>
+      <g id="baseGroup" clip-path="url(#theClipPath)"></g>
+      <g id="strokeGroup"></g>
+      <g id="numbersGroup"></g>
+    </svg>
+    <script type="text/javascript" src="coordinate.js"></script>
+    <script>
+      console.clear();
+      const svg = document.querySelector("svg");
+      const svgns = "http://www.w3.org/2000/svg";
+      const baseGroup = document.querySelector("#baseGroup");
+      const clipPathGroup = document.querySelector("#theClipPath");
+      const strokeGroup = document.querySelector("#strokeGroup");
+      const numbersGroup = document.querySelector("#numbersGroup");
+      const anims = [];
+
+      // change any of these value
+
+      const radius = 50;
+      const spacing = 20;
+
+      const columns = 27;
+      const rows = 13;
+      const colorArray = ["#94c356", "#46a4cc", "#a63e4b"];
+      let counter = 0;
+      let treasure_signpost = 0;
+
+      // figure the new svg width/height
+      const svgWidth = radius * 2 * columns + (columns + 1) * spacing ;
+      const svgHeight = radius * 2 * rows +   (rows + 1)    * spacing + (radius + spacing);
+
+      gsap.set(svg, {
+        attr: {
+          width: svgWidth,
+          height: svgHeight,
+          viewBox: "0 0 " + svgWidth + " " + svgHeight
+        }
+      });
+      for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+          counter++;
+
+          let txt = document.createElementNS(svgns, "text");
+          txt.textContent = counter;
+          numbersGroup.appendChild(txt);
+
+          let newCirc = document.createElementNS(svgns, "circle");
+          baseGroup.appendChild(newCirc);
+
+          // set attribute
+          let newX = (2 * radius + spacing) * i + radius + spacing;
+          let newY = (2 * radius + spacing) * j + radius + spacing;
+
+          if (i % 2 == 0){
+            newY = newY + radius + spacing;
+          }
+
+          // origin
+          if (counter==171){
+            gsap.set(newCirc, {
+                cy: newY,
+                cx: newX,
+                r: 60,
+                fill: colorArray[0]
+            });
+          } 
+          else if (treasure.includes(counter, treasure_signpost)){
+            treasure_signpost = treasure_signpost + 1;
+            
+            // make the base circle hidden in the clipPath
+            gsap.set(newCirc, {
+                cy: newY,
+                cx: newX,
+                r: radius,
+                fill: colorArray[1]
+            });
+
+            let newStroke = document.createElementNS(svgns, "circle");
+            strokeGroup.appendChild(newStroke);
+            newStroke.index = i * rows + j;
+            console.log("else if" + newStroke.index)
+            newStroke.addEventListener("click", animateClip);
+
+            // make the rectangles for the clip-paths
+            let newRect = document.createElementNS(svgns, "rect");
+            clipPathGroup.appendChild(newRect);
+            console.log("else if" + "rect");
+
+            // make the stroked circle
+            gsap.set(newStroke, {
+                attr: {
+                cy: newY,
+                cx: newX,
+                r: radius-8,
+                fill: colorArray[2]
+                }
+            });
+
+            gsap.set(newRect, {
+                attr: {
+                x: newX - radius,
+                y: newY - radius,
+                width: radius * 2,
+                height: radius * 2,
+                fill: "#23FF99"
+                }
+            });
+            let tween = gsap
+                .from(newRect, { yPercent: 100, ease: "sine.inOut" })
+                .reversed(true);
+                //
+            anims.push(tween);
+            //
+        }
+        // stone
+        else {
+            gsap.set(newCirc, {
+              cy: newY,
+              cx: newX,
+              r: radius,
+              fill: "#484848"
+          });
+        }
+
+          gsap.set(txt, {
+            attr: {
+              x: newX,
+              y: newY
+              
+            }, fill: "black"
+          });
+        }
+      }
+
+      console.log("tween length:" + anims.length)
+
+      function animateClip() {
+        anims[this.index].reversed(!anims[this.index].reversed());
+      }
+    </script>
+  </body>
+</html>
+
+
