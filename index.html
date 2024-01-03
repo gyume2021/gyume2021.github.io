@@ -46,35 +46,13 @@
             width: 250px;
         }
 
-        img.cosmic {
-            width: 50px;
-        }
-
         .map {
           float: left;
           /* width: 50%; 1張就100 兩個地圖就50 */
           width: 100%;
-          padding: 5px;
+          /* padding: 5px; */
           
         }
-
-        .item {
-          float: left;
-          width: 10%;
-          padding: 5px;
-        }
-
-        .pattern {
-          padding: 5px;
-          float: left;
-          width: 16.6%;
-          text-align: center;
-          opacity: 0.3;
-        }
-
-        /* .pattern:hover {
-          opacity: 1.0;
-        } */
 
         /* Clear floats after image containers */
         .row::after {
@@ -85,114 +63,38 @@
 
         .image-description {
           text-align: center;
-          border: 1px solid #008772;
+          border: 1px  solid #008772;
           background-color: #008772;
-          /* padding: 5px; */
+          /* padding: 10px; */
           font-family: arial, sans-serif;
-          border-radius: 15px 15px 0px 0px;
+          border-radius: 20px 20px 0px 0px;
           color: #fff;
           font-size: 25px;
         }
-
     </style>
-
-  <script>
-  function click_to_change_image_opacity(div_item) {
-    const nextNode = div_item.nextSibling.nextSibling;
-    console.log(div_item.nextSibling.nextSibling);
-    console.log(div_item.nextSibling.nextSibling.nodeType);
-    if (div_item.style.opacity == 1) {
-
-    //   if (nextNode != null) {
-    //       currentNode = nextNode;
-    //   } else {
-    //       break;
-    //   }
-    //   div_item.parentNode.Allchildren.style.opacity = 0.3;
-    
-    } 
-    // else {
-    //   div_item.parentNode.Allchildren.style.opacity = 0.3;
-    //   div_item.style.opacity = 1;
-    // }
-    
-  }
-  </script>
   </head>
   <body>
     <div class="row">
       <div class="map">
         <div class="image-description">
-          <p>Southern Part</p>
-        </div>
-        <a href="https://drive.google.com/file/d/1ZCXG0kbGXIAxjr2f_9a_iCwStNpmjhm8/view?usp=sharing">
-          <img src="img/island-south.jpg" alt="Forest" style="width:100%">
-        </a>
-        <!-- <div>
-          <div class="pattern" onclick="click_to_change_image_opacity(this)">
-            <img src="img/armor_increase.png">
-            <p>Armor increase</p>
-          </div>
-          <div class="pattern" onclick="click_to_change_image_opacity(this)">
-            <img src="img/dodge_reduction.png">
-            <p>Enemy dodge reduction</p>
-          </div>
-          <div class="pattern" onclick="click_to_change_image_opacity(this)">
-            <img src="img/magic_attack.png">
-            <p>Magic Attack increase</p>
-          </div>        
-          <div class="pattern" onclick="click_to_change_image_opacity(this)">
-            <img src="img/magical_defense.png">
-            <p>Magic Defense increase</p>
-          </div>   
-          <div class="pattern" onclick="click_to_change_image_opacity(this)">
-            <img src="img/physical_attack.png">
-            <p>Physical Attack increase</p>
-          </div>  
-          <div class="pattern" onclick="click_to_change_image_opacity(this)">
-            <img src="img/flag_box_flags.jpg">
-            <p>Battle Flag Chest</p>
-          </div>  
-        </div> -->
-      </div>
-      <!-- <div class="map">
-        <div class="image-description">
+
           <p>Northern Part</p>
         </div>
-        <a href="https://drive.google.com/file/d/13m4oMRZUHsgnKWOWEw7NZRujayyIXKIJ/view?usp=sharing">
-          <img src="img/island-north.png" alt="Forest" style="width:100%">
+        <a href="https://drive.google.com/file/d/1wMMLyjiU_ZfXgkLsynT4PgYUZ-Rzbj8t/view?usp=sharing" target="_blank">
+          <img src="img/island-north.jpg" alt="Forest" style="width:100%">
         </a>
-      </div> -->
-      <!-- <div class="item">
+        
+      </div>
+      <div class="map">
         <div class="image-description">
-          <p>125 items, 19 patterns</p>
+
+          <p>Southern Part</p>
         </div>
-        <ul>
-          <li>9: 1 Legendary Gift of the Dominion, 1 Magic Defense Pattern</li>
-          <li>16: 1 Physical Attack Pattern, 1 Accuracy Pattern</li>
-          <li>26: 1 Magic Attack Pattern, 1 Accuracy Pattern</li>
-          <li>33: 1 Magic Defense Pattern</li>
-          <li>42: 1 Magic Attack Pattern, 1 Magic Defense Pattern</li>
-          <li>50: 1 Magic Defense Pattern, 1 Armor Pattern</li>
-          <li>51: 1,500 Choice of Radiant Crystal, 1 Magic Attack Pattern</li>
-          <li>60: 1 Battle Flag Chest, 1 Accuracy Pattern</li>
-          <li>67: 1 Physical Attack Pattern, 1 Armor Pattern</li>
-          <li>72: 1 Armor Pattern</li>
-          <li>75: 1 Physical Attack Pattern, 1 Accuracy Pattern</li>
-          <li>80: 1 Red Equipment Chest 2, 1 Magic Attack Pattern</li>
-          <li>88: 1 Physical Attack Pattern</li>
-          <li>90: 1 Magic Attack Pattern, 2 Armor Pattern</li>
-          <li>95: 500 Titan Artifact Sphere, 1 Physical Attack Pattern</li>
-          <li>109: 1 Accuracy Pattern</li>
-          <li>115: 1 Magic Attack Pattern</li>
-          <li>118: 2 Magic Defense Pattern, 1 Physical Attack Pattern</li>
-          <li>123: 1,500 Skin Stone Chest, 1 Armor Pattern</li>    
-          <li>125: 1 Accuracy Pattern</li>
-        </ul>
-      </div> -->
+        <a href="https://drive.google.com/file/d/1ZCXG0kbGXIAxjr2f_9a_iCwStNpmjhm8/view?usp=sharing" target="_blank">
+          <img src="img/island-south.jpg" alt="Forest" style="width:100%">
+        </a>
+      </div>
     </div>
-
-
 
     <table>
         <tr>
@@ -240,13 +142,6 @@
             <td><a href="http://bit.ly/3nlIN8A" target="_blank">Guild War</a></td>
             <td>Member's time zone and suggestion for members who are tired of waiting in Guild War</td>
         </tr>
-        <!-- <tr>
-            <td align="center"><img src="img/cow.JPG" alt="Italian Trulli" align="middle"></td>
-            <td><a href="http://bit.ly/3LTJXm4">Clash of World Team Arrangement</a></td>
-            <td>The document will be updated after the end of Clash of World season 2</td>
-        </tr> -->
-      </table>
+    </table>
   </body>
 </html>
-
-
