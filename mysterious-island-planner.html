@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>file repository</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        .map {
+          float: left;
+          /* width: 50%; 1張就100 兩個地圖就50 */
+          width: 100%;
+          /* padding: 5px; */
+          
+        }
+
+        .pattern_image {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove any extra space below the image */
+            margin: auto; 
+        }
+
+        .pattern {
+          width: 16.6%;
+          float: left;
+          /* padding: 5px;*/
+          text-align: center;
+          opacity: 0.3;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .image-description {
+          text-align: center;
+          border: 1px solid #008772;
+          background-color: #008772;
+          /* padding: 5px; */
+          font-family: arial, sans-serif;
+          border-radius: 15px 15px 0px 0px;
+          color: #fff;
+          font-size: 25px;
+        }
+
+        .svg-container {
+          /* position: absolute; */
+          width: 100%;
+          height: 100%;
+        }
+
+        svg {
+        width: 96vw;
+        height: auto;
+        /* position: absolute; */
+      }
+
+      text {
+        font-size: 24px;
+        fill: white;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
+    <script type="text/javascript" src="coordinate.js"></script>
+  </head>
+  <body>
+    <!-- <div><h1 class="clicked_couter">0</h1> steps are needed</div>
+    
+    sadf-->
+    <div class="row">
+      
+      <div class="map">
+        <div><p><b>South map: You need <span id="expected_explorer">0</span> Explorer's Move.</b><p></div>
+        <div  x="30%" y="20%" class="svg-container">
+          <!-- <svg width='100%' height='100%' viewBox="0 0 100 50" preserveAspectRatio="none" style='background-color: cyan'></svg> -->
+          <svg xmlns="http://www.w3.org/2000/svg"  width='50%' height='50%' viewBox="0 0 50 20" preserveAspectRatio="none">
+            <g id="baseGroup"></g>
+            <g id="numbersGroup"></g>
+          </svg>
+        </div>
+        
+        <div>
+          <div class="pattern" onclick="click_to_change_image_opacity(this)">
+            <img class="pattern_image" src="img/armor_increase.png">
+            <p>Armor-increase</p>
+          </div>
+          <div class="pattern" onclick="click_to_change_image_opacity(this)">
+            <img class="pattern_image" src="img/dodge_reduction.png">
+            <p>Enemy-dodge-reduction</p>
+          </div>
+          <div class="pattern" onclick="click_to_change_image_opacity(this)">
+            <img class="pattern_image" src="img/magic_attack.png">
+            <p>Magic-Attack-increase</p>
+          </div>        
+          <div class="pattern" onclick="click_to_change_image_opacity(this)">
+            <img class="pattern_image" src="img/magical_defense.png">
+            <p>Magic-Defense-increase</p>
+          </div>   
+          <div class="pattern" onclick="click_to_change_image_opacity(this)">
+            <img class="pattern_image" src="img/physical_attack.png">
+            <p>Physical-Attack-increase</p>
+          </div>  
+          <div class="pattern" onclick="click_to_change_image_opacity(this)">
+            <img class="pattern_image" src="img/flag_box_flags.jpg">
+            <p>Battle-Flag-Chest</p>
+          </div>  
+        </div>
+      </div>
+      <!-- <div class="item">
+        <div class="image-description">
+          <p>125 items, 19 patterns</p>
+        </div>
+        <ul>
+          <li>9: 1 Legendary Gift of the Dominion, 1 Magic Defense Pattern</li>
+          <li>16: 1 Physical Attack Pattern, 1 Accuracy Pattern</li>
+          <li>26: 1 Magic Attack Pattern, 1 Accuracy Pattern</li>
+          <li>33: 1 Magic Defense Pattern</li>
+          <li>42: 1 Magic Attack Pattern, 1 Magic Defense Pattern</li>
+          <li>50: 1 Magic Defense Pattern, 1 Armor Pattern</li>
+          <li>51: 1,500 Choice of Radiant Crystal, 1 Magic Attack Pattern</li>
+          <li>60: 1 Battle Flag Chest, 1 Accuracy Pattern</li>
+          <li>67: 1 Physical Attack Pattern, 1 Armor Pattern</li>
+          <li>72: 1 Armor Pattern</li>
+          <li>75: 1 Physical Attack Pattern, 1 Accuracy Pattern</li>
+          <li>80: 1 Red Equipment Chest 2, 1 Magic Attack Pattern</li>
+          <li>88: 1 Physical Attack Pattern</li>
+          <li>90: 1 Magic Attack Pattern, 2 Armor Pattern</li>
+          <li>95: 500 Titan Artifact Sphere, 1 Physical Attack Pattern</li>
+          <li>109: 1 Accuracy Pattern</li>
+          <li>115: 1 Magic Attack Pattern</li>
+          <li>118: 2 Magic Defense Pattern, 1 Physical Attack Pattern</li>
+          <li>123: 1,500 Skin Stone Chest, 1 Armor Pattern</li>    
+          <li>125: 1 Accuracy Pattern</li>
+        </ul>
+      </div> -->
+    </div>
+    <script>
+        console.clear();
+        const svg = document.querySelector("svg");
+        const svgns = "http://www.w3.org/2000/svg";
+        const baseGroup = document.querySelector("#baseGroup");
+        const numbersGroup = document.querySelector("#numbersGroup");
+    
+        const radius = 50;
+        const spacing = 20;
+    
+        const columns = 27;
+        const rows = 13;
+        const color = {"origin":"#94c356" , 
+                       "unexlored": "#46a4cc", 
+                       "exlored": "#882edb", 
+                       "pattern":"#a63e4b",
+                      "stone":"#262222",
+                      "text":"#eee6f5"};
+        let counter = 0;
+        let treasure_signpost = 0;
+        const pattern_spot_strokeWidth = 10;
+        let clicked_spot = localStorage.length;
+        document.getElementById('expected_explorer').innerText = clicked_spot;
+        
+        // figure the new svg width/height
+        const svgWidth = radius * 2 * columns + (columns + 1) * spacing ;
+        const svgHeight = radius * 2 * rows +   (rows + 1)    * spacing + (radius + spacing);
+    
+        gsap.set(svg, {
+            attr: {
+              width: svgWidth,
+              height: svgHeight,
+              viewBox: "0 0 " + svgWidth + " " + svgHeight
+            }
+        });
+        for (let i = 0; i < columns; i++) {
+          for (let j = 0; j < rows; j++) {
+            counter++;
+    
+            // text initialization
+            let txt = document.createElementNS(svgns, "text");
+            txt.textContent = counter;
+            numbersGroup.appendChild(txt);
+    
+            // circle initialization
+            let newCirc = document.createElementNS(svgns, "circle");
+            baseGroup.appendChild(newCirc);
+    
+            // set attribute
+            // x,y coordinate
+            let newX = (2 * radius + spacing) * i + radius + spacing;
+            let newY = (2 * radius + spacing) * j + radius + spacing;
+            
+            // vertical shift in odd column  
+            if (i % 2 == 0){
+              newY = newY + radius + spacing;
+            }
+    
+            // origin
+            if (counter==171){
+              gsap.set(newCirc, {
+                  cy: newY,
+                  cx: newX,
+                  r: 60,
+                  fill: color["origin"] //green
+              });
+            } 
+            // treasure spot
+            else if (treasure.includes(counter, treasure_signpost)){
+              treasure_signpost = treasure_signpost + 1;
+              
+              // spot containing a pattern
+              //console.log("counter: " + counter);
+              //console.log("hasOwnProperty: " + location_pattern.hasOwnProperty(counter));
+
+              if (localStorage.getItem(counter.toString()) !== null) {
+                  gsap.set(newCirc, {
+                    cy: newY,
+                    cx: newX,
+                    r: radius,
+                    fill: color["exlored"],  
+                    stroke: "orange",
+                    strokeWidth: pattern_spot_strokeWidth,
+                    strokeOpacity: 0.0
+                  });
+                  newCirc.setAttribute("clicked", "1");
+              } else {
+                  gsap.set(newCirc, {
+                    cy: newY,
+                    cx: newX,
+                    r: radius,
+                    fill: color["unexlored"],  
+                    stroke: "orange",
+                    strokeWidth: pattern_spot_strokeWidth,
+                    strokeOpacity: 0.0
+                  });
+                  newCirc.setAttribute("clicked", "0");
+              }
+
+              addClassToCircle(newCirc, counter.toString());
+
+              // add class to spot with patterns
+              if (location_pattern.hasOwnProperty(counter)){
+                for (let k = 0; k < location_pattern[counter].length; k++) {
+                    //console.log(location_pattern[counter][k]);
+                    let className = location_pattern[counter][k];
+                    addClassToCircle(newCirc, className);
+                }
+                //console.log(location_pattern[counter]);
+              }
+              
+              newCirc.addEventListener("click", function () {
+                  // true 設回原值
+                  if (newCirc.getAttribute('clicked') === "1"){
+                    gsap.set(newCirc, {
+                      fill: color["unexlored"]
+                    });
+                    newCirc.setAttribute("clicked", "0");
+                    clicked_spot = clicked_spot -1 ;
+                    //localStorage.setItem("clicked_spot",clicked_spot);
+                    document.getElementById('expected_explorer').innerText = clicked_spot;
+                    localStorage.removeItem(newCirc.classList[0]);
+                  }
+                  else if (newCirc.getAttribute('clicked') === "0"){
+                    gsap.set(newCirc, {
+                      fill: color["exlored"] // 
+                    });
+                    newCirc.setAttribute("clicked", "1");
+                    clicked_spot = clicked_spot +1 ;
+                    //localStorage.setItem("clicked_spot",clicked_spot);
+                    document.getElementById('expected_explorer').innerText = clicked_spot;
+                    localStorage.setItem(newCirc.classList[0],1);
+                  }
+                  else{
+                    console.log("bug");
+                  }
+              });
+          }
+          // stone
+          else {
+              gsap.set(newCirc, {
+                cy: newY,
+                cx: newX,
+                r: radius,
+                fill: color["stone"]  //dark-grey
+            });
+          }
+    
+            gsap.set(txt, {
+              attr: {
+                x: newX,
+                y: newY
+              }, fill: color["text"]
+            });
+          }
+        }
+        
+        const pattern_index = { "Armor-increase":0
+                                , "Enemy-dodge-reduction":1
+                                , "Magic-Attack-increase":2 
+                                , "Magic-Defense-increase":3
+                                , "Physical-Attack-increase":4
+                                , "Battle-Flag-Chest":5}; 
+    
+        let previous_pattern_index = null;
+        let previous_pattern = null;
+    
+        // pattern 的按鈕開關
+        function click_to_change_image_opacity(div_item) {
+          // number 
+          const selected_pattern = div_item.children[1].innerHTML;
+          const selected_pattern_index = pattern_index[selected_pattern]; 
+          
+
+          // patter_location    
+          console.log("selected_pattern: " + selected_pattern);
+          // 有按鈕被按過
+          if (previous_pattern_index != null){
+            // 選同一個, 就改變狀態
+            if (selected_pattern_index == previous_pattern_index){
+              if (div_item.style.opacity == 1){
+                // 開 -> 關
+                div_item.style.opacity = 0.3;
+                const selected_element = document.querySelectorAll("." + selected_pattern);
+                for (let i = 0; i < selected_element.length; i++) {
+                  gsap.set(selected_element[i], {
+                    strokeOpacity: 0.0
+
+                  });
+                }
+
+              } else{
+                // 關 -> 開 
+                div_item.style.opacity = 1;
+                const selected_element = document.querySelectorAll("." + selected_pattern);
+                for (let i = 0; i < selected_element.length; i++) {
+                  gsap.set(selected_element[i], {
+                    strokeOpacity: 1
+                  });
+                }
+              }
+            } 
+            // 選不同個, 就一開一關
+            else {
+              div_item.style.opacity = 1;
+              div_item.parentElement.children[previous_pattern_index].style.opacity = 0.3;
+
+              const previous_element = document.querySelectorAll("." + previous_pattern);
+              for (let i = 0; i < previous_element.length; i++) {
+                gsap.set(previous_element[i], {
+                    strokeOpacity: 0
+                });
+              }
+
+
+              const selected_element = document.querySelectorAll("." + selected_pattern);
+              for (let i = 0; i < selected_element.length; i++) {
+                gsap.set(selected_element[i], {
+                    strokeOpacity: 1
+                });
+              }
+            }
+          } 
+          //第一次按, 按下的按鈕就開
+          else {
+            div_item.style.opacity = 1;
+            const selected_element = document.querySelectorAll("." + selected_pattern);
+            for (let i = 0; i < selected_element.length; i++) {
+              gsap.set(selected_element[i], {
+                strokeOpacity: 1
+              });
+
+            }
+          }
+          previous_pattern_index = selected_pattern_index;
+          previous_pattern = selected_pattern; 
+        }
+        function addClassToCircle(element, className) {
+          // console.log("add class: " + className)
+          element.classList.add(className);
+        }
+
+        function removeClassFromCircle(element, className) {
+          // console.log("add class: " + className)
+          element.classList.remove(className);
+        }
+
+      </script>
+  </body>
+</html>
