@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASGARD Guild War Log</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        .titan::before {
+            /* replace U+ with \0 */
+            content: "🔥 🌊 🌱 ";
+            
+        }
+
+        .hero::before {
+            /* replace U+ with \0 */
+            content: "😎 ";
+            
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        /* Change button color on hover */
+        .button:hover {
+            
+            background-color: #2980b9;
+        }
+
+        .lost {
+            background-color: #b83232;
+        }
+
+        .won {
+            background-color: #539408;
+        }
+
+    </style>
+</head>
+<body>
+    <script src="filter.js"></script>
+    <h2>ASGARD Guild War Log 2024/1/15</h2>
+    <div class="button" onclick="buttonClick()">Show all</div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Result
+                    <select name="wonlost" id="wonfilterSelect">
+                        <option value="" disabled selected>Filter</option>
+                        <option value="won">Won</option>
+                        <option value="lost">Lost</option>
+                    </select>      
+                </th>
+                <th>Type
+                    <select name="herotitan" id="typefilterSelect">
+                        <option value="" disabled selected>Filter</option>
+                        <option value="hero">Hero</option>
+                        <option value="titan">Titan</option>
+                    </select>  
+                </th>
+                <th>Attacker</th>
+                <th>Defencer</th>
+                <th>Position</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Little Pumpkin</td>
+                <td>Leisure game</td>
+                <td>Bridge: 1</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Little Pumpkin</td>
+                <td>GREG-U.S.A.</td>
+                <td>Bridge: 4</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>AQP</td>
+                <td>Yasiu</td>
+                <td>Barracks: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Latrudictus</td>
+                <td>Cygan</td>
+                <td>Bridge: 2</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Latrudictus</td>
+                <td>prof dr McKwach</td>
+                <td>Bridge: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>serina</td>
+                <td>Yoshicage</td>
+                <td>Bastion of Fire: 1</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Jacky Chen</td>
+                <td>Kesey</td>
+                <td>Lighthouse: 2</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Jacky Chen</td>
+                <td>Void4Vagueness</td>
+                <td>Foundry: 4</td>
+            </tr>
+            <tr>
+                <td class=lost>lost</td>
+                <td class=hero>hero</td>
+                <td>AQP</td>
+                <td>abusaer</td>
+                <td>Foundry: 1</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Halilburc</td>
+                <td>elnino</td>
+                <td>Bastion of Fire: 4</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Halilburc</td>
+                <td>Leafwalker</td>
+                <td>Bastion of Ice: 2</td>
+            </tr>
+            <tr>
+                <td class=lost>lost</td>
+                <td class=titan>titan</td>
+                <td>Team_X-Man</td>
+                <td>Koan</td>
+                <td>Bastion of Ice: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Team_X-Man</td>
+                <td>Kesey</td>
+                <td>Bastion of Ice: 1</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Majin</td>
+                <td>Popps </td>
+                <td>Foundry: 3</td>
+            </tr>
+            <tr>
+                <td class=lost>lost</td>
+                <td class=titan>titan</td>
+                <td>JEFF LIN</td>
+                <td>Hippvs</td>
+                <td>Bastion of Fire: 3</td>
+            </tr>
+            <tr>
+                <td class=lost>lost</td>
+                <td class=titan>titan</td>
+                <td>JEFF LIN</td>
+                <td>Yasiu</td>
+                <td>Bastion of Fire: 2</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>NYY</td>
+                <td>Sidd</td>
+                <td>Lighthouse: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Мариуполь</td>
+                <td>Hippvs</td>
+                <td>Bastion of Fire: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Мариуполь</td>
+                <td>Yasiu</td>
+                <td>Bastion of Fire: 2</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Punisher</td>
+                <td>prof dr McKwach</td>
+                <td>Citadel: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Punisher</td>
+                <td>Yoshicage</td>
+                <td>Citadel: 4</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>serina</td>
+                <td>AINZ</td>
+                <td>Citadel: 5</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>NYY</td>
+                <td>GREG-U.S.A.</td>
+                <td>Citadel: 2</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Majin</td>
+                <td>Leafwalker</td>
+                <td>Citadel: 1</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Mejind</td>
+                <td>Leisure game</td>
+                <td>Citadel: 6</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Mejind</td>
+                <td>Sidd</td>
+                <td>Spring of Elements: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Team Toni</td>
+                <td>TIMEtoWIN</td>
+                <td>Spring of Elements: 1</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Team Toni</td>
+                <td>Robedeos</td>
+                <td>Spring of Elements: 4</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>TRIP</td>
+                <td>Koan</td>
+                <td>Bastion of Ice: 3</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>TRIP</td>
+                <td>Void4Vagueness</td>
+                <td>Spring of Elements: 2</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Blakawesome</td>
+                <td>abusaer</td>
+                <td>Foundry: 1</td>
+            </tr>
+            <tr>
+                <td class=lost>lost</td>
+                <td class=titan>titan</td>
+                <td>Blakawesome</td>
+                <td>Popps </td>
+                <td>Bastion of Ice: 4</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Nadal</td>
+                <td>elnino</td>
+                <td>Lighthouse: 1</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Nadal</td>
+                <td>Hippvs</td>
+                <td>Barracks: 1</td>
+            </tr>
+            <tr>
+                <td class=lost>lost</td>
+                <td class=titan>titan</td>
+                <td>Akinogal</td>
+                <td>Jura</td>
+                <td>Gates of Nature: 4</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=titan>titan</td>
+                <td>Akinogal</td>
+                <td>Jura</td>
+                <td>Gates of Nature: 4</td>
+            </tr>
+            <tr>
+                <td class=lost>lost</td>
+                <td class=hero>hero</td>
+                <td>frofro</td>
+                <td>Jura</td>
+                <td>Citadel: 7</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>frofro</td>
+                <td>Jura</td>
+                <td>Citadel: 7</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Hanks</td>
+                <td>TIMEtoWIN</td>
+                <td>Foundry: 2</td>
+            </tr>
+            <tr>
+                <td class=won>won</td>
+                <td class=hero>hero</td>
+                <td>Hanks</td>
+                <td>Cygan</td>
+                <td>Barracks: 2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
