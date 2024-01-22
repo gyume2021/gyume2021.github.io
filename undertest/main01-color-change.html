@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style type="text/css">
+
+            .element{
+                stroke:#bd38df;
+                stroke-width:4px;
+                fill:none;
+            }
+            svg{
+                background:#1d1d1d;
+            }
+            .st1{
+                font-family:Arial;
+                font-size:12;
+                fill:#fff;
+            }
+            
+            .rule {
+                fill:none;
+                stroke:#d3d3d3;
+                stroke-width:1px;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    </head>
+    
+    <body>
+
+        <h1>This is a Heading</h1>
+        <svg version="1.1" id="demo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="600px" height="207px" viewBox="0 0 600 207" style="enable-background:new 0 0 600 207;" xml:space="preserve">
+            <circle id="cssCircle" class="element" cx="57.464" cy="89.464" r="30.131"/>
+            <text transform="matrix(1 0 0 1 32.3333 27)" class="st1 red">CSSPlugin</text>
+            <text transform="matrix(1 0 0 1 327.8688 27)" class="st1">AttrPlugin</text>
+        </svg><br>
+        <div>
+            <button id="play" class="dark-grey-button club-demo-button">play</button>
+        </div>
+
+        <script>
+            var cssCircle = document.getElementById("cssCircle"),
+                playBtn = document.getElementById("play"),
+                tl = gsap.timeline({repeat:10, yoyo:true, repeatDelay:1}); 
+
+            tl.to(cssCircle, {x:0, scale:1})
+                .to(cssCircle, {duration: 0.5, strokeWidth:12, stroke:"white", fill:"#88ce02"});
+
+            play.onclick = function() {
+                tl.restart();
+            }
+        </script>
+    </body>
+</html>
+
+
+
+

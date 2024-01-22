@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Multiple Images Display</title>
+</head>
+<body>
+    <h1>Multiple Images Display Example</h1>
+    
+    <!-- Dynamically generate image tags using a for loop -->
+    <% for (let i = 0; i < imageFilenames.length; i++) { %>
+        <img src="/image<%= i + 1 %>" alt="Image <%= i + 1 %>">
+    <% } %>
+
+</body>
+</html>

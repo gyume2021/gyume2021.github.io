@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style type="text/css">
+
+            .rule{
+                stroke:#D3D3D3;stroke-miterlimit:10;
+            }
+            .box{
+                fill:#88ce02;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    </head>
+    
+    <body>
+
+        <h1>This is a Heading</h1>
+
+
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="205.061px" viewBox="0 0 600 205.061" style="enable-background:new 0 0 600 205.061;" xml:space="preserve">
+            <line class="rule" x1="181.223" y1="0" x2="181.223" y2="205.061"/>
+            <rect id="test" x="18.24" y="11.245" class="box" width="163.319" height="38.865"/>
+            <rect x="53.611" y="58.843" class="box" width="127.948" height="38.865"/>
+            <rect x="105.14" y="107.314" class="box" width="76.419" height="38.865"/>
+            <rect x="142.694" y="154.773" class="box" width="38.865" height="38.865"/>
+        </svg><br>
+        <div>
+            <button id="play" class="dark-grey-button club-demo-button">play</button>
+        </div>
+     
+     
+
+        <script>
+            var playBtn = document.getElementById("play")
+                tl = gsap.timeline({repeat:10, yoyo:false, paused:false});
+
+            tl.to("rect", {duration:0.5, xPercent:100, stagger:0.4});
+
+
+
+            play.onclick = function() {
+                tl.restart();
+            }
+        </script>
+    </body>
+</html>
+
+
+
+

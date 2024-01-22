@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colored Bar Example</title>
+        <style>
+            body{
+            background-color:black;
+            }
+
+            .progress{
+            width:555px;
+            height:10px;
+            }
+
+            .red{
+            background-color:red; 
+            }
+
+            .white{
+            background-color:white;
+            }
+
+            .bg{
+            width:555px;
+            height:10px;
+            background-color:#333;
+            margin-top:5px;
+            }
+
+            #boxes div{
+            position:relative;
+            display:inline-block;
+            margin:20px;
+            width:100px;
+            height:100px;
+            color:black;
+            font-size:30px;
+            line-height:100px;
+            text-align:center;
+            font-family: sans-serif;
+            background: #9af600; /* Old browsers */
+            background: -moz-linear-gradient(top,  #9af600 0%, #a0fd00 50%, #90e700 51%, #a0fe00 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9af600), color-stop(50%,#a0fd00), color-stop(51%,#90e700), color-stop(100%,#a0fe00)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #9af600 0%,#a0fd00 50%,#90e700 51%,#a0fe00 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #9af600 0%,#a0fd00 50%,#90e700 51%,#a0fe00 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #9af600 0%,#a0fd00 50%,#90e700 51%,#a0fe00 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #9af600 0%,#a0fd00 50%,#90e700 51%,#a0fe00 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9af600', endColorstr='#a0fe00',GradientType=0 ); /* IE6-9 */
+
+            -webkit-box-shadow:  0px 0px 10px 2px #a1ff00;
+                    box-shadow:  0px 0px 10px 2px #a1ff00;  
+            }
+
+
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.8.4/TweenMax.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <div class="progress red"></div>
+        <div class="progress white"></div>
+        <div class="progress white"></div>
+        <div class="progress white"></div>
+        <div id="boxes">
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+
+    <script>
+            var progressBars = $(".progress") // lookup and cache all .proggres elements
+
+            //create 3 timelines
+
+            //note each timeline calls onUpdate which is a function that needs 2 parameters:
+            //    a reference to the timeline "{self}"
+            //    a reference to the progress bar 
+            //    note progressBars[1] is the second element in the jQuery collection $(".progress")
+            var box1Timeline = new TimelineLite({
+                onUpdate:setProgress, 
+                onUpdateParams:["{self}", progressBars[1]]
+            });
+
+            box1Timeline.to("#box1", 1, {rotation:360})
+                .to("#box1", 1, {opacity:0})
+
+            //same approach for 2nd and third timeline
+
+            var box2Timeline = new TimelineLite({onUpdate:setProgress, 
+                                                onUpdateParams:["{self}", progressBars[2]]});
+            box2Timeline.to("#box2", 1, {top:100})
+                .to("#box2", 1, {opacity:0})
+
+            var box3Timeline = new TimelineLite({onUpdate:setProgress, 
+                                                onUpdateParams:["{self}", progressBars[3]]});
+            box3Timeline.to("#box3", 1, {rotation:-360})
+                        .to("#box3", 1, {opacity:0})
+
+
+            //note the master timeline also uses onUpdate to control the red progress bar
+
+            var masterTimeline = new TimelineMax({
+                repeat:20, 
+                repeatDelay:1, 
+                onUpdate:setProgress, 
+                onUpdateParams:["{self}", progressBars[0]]
+            });
+
+
+            //master timeline resets all progressBars to scaleX:0
+
+            masterTimeline.set(progressBars, {scaleX:0, transformOrigin:"left"})
+                .add(box1Timeline)
+                .add(box2Timeline)
+                .add(box3Timeline)
+
+            // setProgress() takes parameters that tell it 
+            //   which timeline it's dealing with 
+            //   which progressBar it needs to adjust
+
+            function setProgress (timeline, progressBar){
+                TweenLite.set(progressBar, {scaleX:timeline.progress()})
+            }
+
+
+            $(".progress" ).wrap( "<div class='bg'></div>" );
+            //note for an animation this basic you wouldn't really need 3 separate timelines. 
+            //this approach is more suited to more complex animations as seen here: https://www.greensock.com/why-gsap/
+    </script>
+
+    </body>
+</html>
+
+
+
+

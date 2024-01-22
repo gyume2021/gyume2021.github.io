@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        #div1{
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        #hero1, #hero2, #hero3, #hero4, #hero5 {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            console.log(data);
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Drag and Drop</h2>
+    <p>Drag the image back and forth between the two div elements.</p>
+
+    <img id="img01" src="./img/im01.png">
+    <img id="img02" src="./img/im02.png">
+    
+    <p id="hero6"></p> 
+
+    <div>
+        <div>
+            <audio controls loop repeat>
+                <source src="bgm/re0.m4a" type="audio/mp4">
+            </audio>
+        </div>
+        <p >hero1</p> 
+        <div id="hero1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        
+        <p >hero2</p> 
+        <div id="hero2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <p >hero3</p> 
+        <div id="hero3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <p >hero4</p> 
+        <div id="hero4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <p >hero5</p> 
+        <div id="hero5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    
+    <script>
+        const nodeList = document.querySelectorAll("img");
+        for (let i = 0; i < nodeList.length; i++) {
+            console.log(nodeList[i]);
+            // listener for panel image
+            nodeList[i].addEventListener("click", function eventHandler(e1) {
+                    //console.log(this.id); // logs the className of my_element
+                    //console.log(e1.currentTarget === this); // logs `true`
+                    // after click
+                    add_image_to_queue(e1);
+                    this.removeEventListener('click', eventHandler);
+            });
+        }
+
+
+        // const nodeList = document.querySelectorAll("img");
+        // for (let i = 0; i < nodeList.length; i++) {
+        //     console.log(nodeList[i]);
+        //     // listener for panel image
+        //     nodeList[i].addEventListener("click", function eventHandler(e1) {
+        //             //console.log(this.id); // logs the className of my_element
+        //             //console.log(e1.currentTarget === this); // logs `true`
+        //             // after click
+        //             add_image_to_queue(e1);
+        //             this.removeEventListener('click', eventHandler);
+        //     });
+        // }
+
+        // // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#the_value_of_this_within_the_handler
+        
+        // function add_image_to_queue(e3) {
+        //     e3.currentTarget.style.opacity = 0.1;
+        //     const node = document.createElement("img");
+        //     node.src = e3.currentTarget.src;
+        //     node.width = "88";
+        //     node.height = "31";
+        //     document.getElementById("hero4").appendChild(node);
+        
+        //     // console.log("inside function");
+        //     // console.log(e3.currentTarget);
+        //     const image = e3.currentTarget; 
+                   
+
+        //     node.addEventListener("click", function (e2) {
+        //         // console.log("add_image_to_queue addEventListener:");
+        //         // console.log(image);
+        //         remove_image_from_queue(image, e2);
+        //     });
+
+        // }
+
+        // function remove_image_from_queue(large_image, small_image) {
+        //     console.log("large:"); // manaul image
+        //     // console.log(large_image.currentTarget);
+        //     console.log("small:"); // added image
+        //     // console.log(small_image.currentTarget);
+        //     large_image.style.opacity = 1;
+        //     large_image.addEventListener("click", function eventHandler(e4) {
+        //             add_image_to_queue(e4);
+        //             this.removeEventListener('click', eventHandler);
+        //     });
+        //     small_image.currentTarget.remove();
+        // }
+
+    </script>
+</body>
+</html>
+
+
+
+
