@@ -1,0 +1,75 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.titan::before {
+    /* replace U+ with \0 */
+    content: "🔥 🌊 🌱 ";
+    
+}
+
+.hero::before {
+    /* replace U+ with \0 */
+    content: "😎 ";
+    
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Change button color on hover */
+.button:hover {
+    background-color: #2980b9;
+}
+
+.won {
+    background-color: #dff2f1ff;
+}
+
+.lost {
+    background-color: #fbe9e7ff;
+}
+
+.won-head {
+    border-left: 5px solid #7dcbc4ff;
+}
+
+.lost-head {
+    border-left: 5px solid #ff8a60ff;
+}
+
+.player {
+    font-family: Helvetica;
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.elementSpiritStar {
+    font-family: Helvetica;
+    font-size: 20px;
+    margin-top: 100%;
+    color: rgb(219, 75, 195);
+    z-index: 200;
+}

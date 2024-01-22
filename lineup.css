@@ -1,0 +1,174 @@
+.lineup-container {
+    justify-content: space-between;
+    display: flex;
+    /* margin-left: 25%;
+    margin-right: 25%; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: auto;
+    background-color: #1b0d04;
+    /* display: inline-block; */
+    
+}
+
+.hero-container {
+    /* float: middle; */
+    position: relative;
+    width: 100% !important;  
+    /* margin: 10px; */
+    /* border: 10px solid #4224ec; */
+    box-sizing: border-box;
+    float: left;
+    /* background-color: inherit; */
+}
+
+.image-container {
+    /* display: inline-block;  */
+    
+    display: flex; 
+    width: 100% !important;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: #1b0d04; */
+}
+.backgnd-container{
+
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    z-index: 40;
+}
+.avatar-container{
+
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9%;
+    margin-bottom: 9%;
+    z-index: 50;
+}
+.frame-container{
+    z-index: 60;
+    width: 100%;
+}
+.star-container{
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 70%;
+    margin-bottom: 20%;
+    z-index: 110;
+}
+.level-container{
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 100%;
+    
+    z-index: 120;
+}
+.patronage-container{
+    width: 100%;
+    margin-right: 75%;
+    margin-bottom: 75%;
+    z-index: 130;
+}
+/* //////////////////// */
+ /* .hero-container {
+    position: relative;
+    width: 100% !important;  
+    box-sizing: border-box;
+    float: left;
+}  */
+
+.strength-container{
+    margin-top: 100%;
+    /* margin-left: 50%;
+    margin-right: 50%; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 150;
+}
+/* /////////////////////// */
+.level-frame {
+    fill: #5c0c09ff;
+    stroke:#de403aff;
+    stroke-width: 4;
+    width: 50%;
+    height: 80%;
+}
+
+.level-text {
+    fill: #ffffff; 
+    /* font-size: 14; */
+}
+
+.strength-frame {
+    width: 80%; 
+    height: 80%; 
+    fill:#000000ff;
+    stroke:#fce4b7ff;
+    stroke-width:4;
+}
+
+.strength-text {
+    fill: #fce4b7ff; 
+    /* font-size: 10; */
+    font-weight: bold;
+}
+/* ///////////////////////////////////////// */
+/* .hero-container {
+    position: relative;
+    width: 100% !important;  
+    box-sizing: border-box;
+    float: left;
+} */
+
+.flag-container {
+    position: relative;
+    width: 100% !important;  
+    box-sizing: border-box;
+    float: left;
+}
+/* //////////////////////////////////////// */
+/* .strength-container{
+    margin-top: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 150;
+} */
+
+.series-container {
+    margin-top: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 150;
+}
+/* ////////////////////////////// */
+.aura-container {
+    position: relative;
+    width: 100% !important;  
+    box-sizing: border-box;
+    float: left;
+}
+
+/* .aura-container {
+    margin-top: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 150;
+} */
