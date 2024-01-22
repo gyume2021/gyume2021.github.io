@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>file repository</title>
-    
+    <title>Infinite Dream s124</title>
+    <link rel="stylesheet" href="css/mysterious-island.css">
+    <link rel="stylesheet" href="css/guildwar-log.css">
     <style>
         * {
           box-sizing: border-box;
@@ -32,14 +33,14 @@
           background-color: #dddddd;
         }
 
-        a {
+        h1 {
             text-align: center;
             display: block;
         }
 
-        img.island {
-          height: auto;
-          width: auto;
+        a {
+            text-align: center;
+            display: block;
         }
 
         img.slides {
@@ -47,31 +48,7 @@
             width: 250px;
         }
 
-        .map {
-          float: left;
-          /* width: 50%; 1張就100 兩個地圖就50 */
-          width: 100%;
-          /* padding: 5px; */
-          
-        }
 
-        /* Clear floats after image containers */
-        .row::after {
-          content: "";
-          clear: both;
-          display: table;
-        }
-
-        .image-description {
-          text-align: center;
-          border: 1px  solid #008772;
-          background-color: #008772;
-          /* padding: 10px; */
-          font-family: arial, sans-serif;
-          border-radius: 20px 20px 0px 0px;
-          color: #fff;
-          font-size: 25px;
-        }
     </style>
   </head>
   <body>
@@ -145,11 +122,22 @@
         </tr>
     </table>
     <!-- <a href="mysterious-island-planner.html" target="_blank">Mysterious Island Planner</a> -->
-    <h1>Guild War Log</h1>
-    <a href="guildwar-dashboard-ASGARD.html" target="_blank">ASGARD</a>
-    <a href="guildwar-dashboard-KATANA.html" target="_blank">KATANA</a>
-    <a href="guildwar-dashboard-KONOHA.html" target="_blank">KONOHA</a>
-    <a href="guildwar-dashboard-Sandbox.html" target="_blank">Sandbox</a>
-    <a href="guildwar-dashboard-Why-So-Serious.html" target="_blank">Why So Serious</a>
+    <h1 id="GWLog"><a href="#GWLog">Guild War Log</a></h1>
+    
+    <!-- <div class="button" onclick="buttonClick()">Show all</div> -->
+    <!-- <div class="button" onclick="location.href='guildwar-dashboard-ASGARD.html';">ASGARD</div> -->
+    <div class="guildwarlog-container">
+      <div class="button" onclick="buttonClick(this.innerHTML)">ASGARD</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">KATANA</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">KONOHA</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">Sandbox</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">Why-So-Serious</div>
+    </div>
+
+    <script>
+      function buttonClick(url) {
+        window.open("guildwar-dashboard-".concat(url, ".html"));
+      }
+    </script>
   </body>
 </html>

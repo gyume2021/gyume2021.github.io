@@ -1,0 +1,25 @@
+.map {
+    float: left;
+    /* width: 50%; 1張就100 兩個地圖就50 */
+    width: 100%;
+    /* padding: 5px; */
+    
+  }
+
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .image-description {
+    text-align: center;
+    border: 1px  solid #008772;
+    background-color: #008772;
+    /* padding: 10px; */
+    font-family: arial, sans-serif;
+    border-radius: 20px 20px 0px 0px;
+    color: #fff;
+    font-size: 25px;
+  }
