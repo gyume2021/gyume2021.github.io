@@ -13215,9 +13215,18 @@
       if (sibling.style.display === 'none') {
         a.textContent = 'Hide Team';
         sibling.style.display = 'flex';
-      } else {
+      } 
+      
+      else if (sibling.style.display === 'flex') {
         a.textContent = 'Show Team';
         sibling.style.display = 'none';
+      }
+      else if (sibling.style.display === ''){
+        a.textContent = 'Hide Team';
+        sibling.style.display = 'flex';
+      }
+      else {
+        console.log("it was bug");
       }
     }
 </script>
