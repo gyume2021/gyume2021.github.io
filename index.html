@@ -62,8 +62,6 @@
           margin-bottom: 60px;
         }
 
-
-
         a:link.title,  a:visited.title {
           text-decoration: none; 
           color: black;
@@ -77,33 +75,37 @@
           text-decoration: underline;
         }
 
-
-
     </style>
   </head>
   <body>
+    <!-- //// -->
+    <!-- Latest Mysterious Island Map -->
+    <!-- //// -->
     <div class="row">
       <div class="map">
         <div class="image-description">
 
-          <p>Northern Part</p>
+          <p>Mysterious Island Map 2 Northern Part</p>
         </div>
         <a href="https://drive.google.com/file/d/1wMMLyjiU_ZfXgkLsynT4PgYUZ-Rzbj8t/view?usp=sharing" target="_blank">
-          <img src="img/island-north.jpg" alt="Forest" style="width:100%">
+          <img src="img/map/map2-island-north.jpg" alt="Forest" style="width:100%">
         </a>
         
       </div>
       <div class="map">
         <div class="image-description">
 
-          <p>Southern Part</p>
+          <p>Mysterious Island Map 2 Southern Part</p>
         </div>
         <a href="https://drive.google.com/file/d/1ZCXG0kbGXIAxjr2f_9a_iCwStNpmjhm8/view?usp=sharing" target="_blank">
-          <img src="img/island-south.jpg" alt="Forest" style="width:100%">
+          <img src="img/map/map2-island-south.jpg" alt="Forest" style="width:100%">
         </a>
       </div>
     </div>
 
+    <!-- //// -->
+    <!-- guild war log -->
+    <!-- //// -->
     <!-- <a href="mysterious-island-planner.html" target="_blank">Mysterious Island Planner</a> -->
     <div class="horizontal-line"></div>
     <h1 id="GWLog"><a href="#GWLog" class=title>Guild War Log</a></h1>
@@ -114,9 +116,10 @@
       <div class="button" onclick="buttonClick(this.innerHTML)">Sandbox</div>
       <div class="button" onclick="buttonClick(this.innerHTML)">Why-So-Serious</div>
     </div>
-
+    <!-- //// -->
+    <!-- tutorial -->
+    <!-- //// -->
     <div class="horizontal-line"></div>
-
     <h1 id="tutorial"><a href="#tutorial" class=title>Tutorial Slides</a></h1>
     <div class="card-container">
         <div class="card" url="https://www.solfors.com/" onclick="cardClick(this.getAttribute('url'))">
@@ -175,13 +178,32 @@
             <p>Member's time zone and suggestion for members who are tired of waiting in Guild War.</p>
           </div>
         </div>
+        <div class="card" url="https://hero-wars-guide.web.app/schedule" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/schedule.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Event Schedule</h3>
+            <p>Detailed quests, rewards, schedule, date, etc of upcoming events.</p>
+          </div>
+        </div>
+    </div>
+    <!-- //// -->
+    <!-- Archived Mysterious Island Map -->
+    <!-- //// -->
+    <div class="horizontal-line"></div>
+    <h1 id="PreviousMap"><a href="#PreviousMap" class=title>Archived Mysterious Island Map<br>(Can be reentered by shortcut set in Hero Wars Simulator)</a></h1>
+    <div class="guildwarlog-container">
+      <div class="button" onclick="mapButtonClick(this.innerHTML)">Map-1</div>
     </div>
 
     <div class="footer"></div>
 
     <script>
+      function mapButtonClick(url) {
+        window.open("map/".concat(url, ".html"));
+      }
+
       function buttonClick(url) {
-        window.open("guildwar-dashboard-".concat(url, ".html"));
+        window.open("guildwar-dashboard/".concat(url, ".html"));
       }
 
       function cardClick(url) {
