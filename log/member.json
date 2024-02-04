@@ -1,0 +1,1197 @@
+{
+	"date": 1707046290.412115,
+	"results": [
+		{
+			"ident": "group_0_body",
+			"result": {
+				"response": [
+					true
+				]
+			}
+		},
+		{
+			"ident": "group_1_body",
+			"result": {
+				"response": {
+					"clan": {
+						"id": "169476",
+						"ownerId": "19173950",
+						"level": "1",
+						"title": "Infinite Dreams",
+						"description": "",
+						"icon": {
+							"flagColor1": 0,
+							"flagColor2": 19,
+							"flagShape": 14,
+							"iconColor": 3,
+							"iconShape": 47
+						},
+						"country": "2",
+						"minLevel": "130",
+						"serverId": "124",
+						"membersCount": "29",
+						"disbanding": false,
+						"topActivity": "509048",
+						"topDungeon": "53856",
+						"roleNames": [],
+						"frameId": 3,
+						"members": {
+							"19106778": {
+								"id": "19106778",
+								"name": "Latrudictus",
+								"lastLoginTime": "1707042834",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "1184",
+								"isChatModerator": false,
+								"frameId": 9,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19119133": {
+								"id": "19119133",
+								"name": "Paravoz",
+								"lastLoginTime": "1707026086",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "2",
+								"commander": false,
+								"avatarId": "512",
+								"isChatModerator": false,
+								"frameId": 5,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19154594": {
+								"id": "19154594",
+								"name": "Mastodont",
+								"lastLoginTime": "1707006919",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": true,
+								"avatarId": "798",
+								"isChatModerator": false,
+								"frameId": 131,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19172175": {
+								"id": "19172175",
+								"name": "Akinogal",
+								"lastLoginTime": "1707041075",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "903",
+								"isChatModerator": false,
+								"frameId": 3,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19173950": {
+								"id": "19173950",
+								"name": "serina",
+								"lastLoginTime": "1707042787",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "255",
+								"commander": true,
+								"avatarId": "1256",
+								"isChatModerator": false,
+								"frameId": 134,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19176545": {
+								"id": "19176545",
+								"name": "NYY",
+								"lastLoginTime": "1707044493",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "29",
+								"isChatModerator": false,
+								"frameId": 34,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19183265": {
+								"id": "19183265",
+								"name": "Jason1975",
+								"lastLoginTime": "1707034758",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "2",
+								"commander": false,
+								"avatarId": "829",
+								"isChatModerator": false,
+								"frameId": 27,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19188353": {
+								"id": "19188353",
+								"name": "Hanks",
+								"lastLoginTime": "1707022164",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "157",
+								"isChatModerator": false,
+								"frameId": 40,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19224827": {
+								"id": "19224827",
+								"name": "Grole",
+								"lastLoginTime": "1707040043",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "2",
+								"commander": false,
+								"avatarId": "30",
+								"isChatModerator": false,
+								"frameId": 50,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19257982": {
+								"id": "19257982",
+								"name": "Nadal",
+								"lastLoginTime": "1707036010",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "627",
+								"isChatModerator": false,
+								"frameId": 20,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19260167": {
+								"id": "19260167",
+								"name": "Majin",
+								"lastLoginTime": "1707040884",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "1244",
+								"isChatModerator": false,
+								"frameId": 130,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19272230": {
+								"id": "19272230",
+								"name": "Little Pumpkin",
+								"lastLoginTime": "1707042377",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": true,
+								"avatarId": "928",
+								"isChatModerator": false,
+								"frameId": 134,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19285459": {
+								"id": "19285459",
+								"name": "TRIP",
+								"lastLoginTime": "1706948756",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": true,
+								"avatarId": "1110",
+								"isChatModerator": false,
+								"frameId": 44,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19371481": {
+								"id": "19371481",
+								"name": "Samusho",
+								"lastLoginTime": "1706999488",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "2",
+								"commander": false,
+								"avatarId": "1116",
+								"isChatModerator": false,
+								"frameId": 37,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19413825": {
+								"id": "19413825",
+								"name": "VEGETA",
+								"lastLoginTime": "1707040665",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "2",
+								"commander": false,
+								"avatarId": "58",
+								"isChatModerator": false,
+								"frameId": 20,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19432191": {
+								"id": "19432191",
+								"name": "JEFF LIN",
+								"lastLoginTime": "1707024185",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "690",
+								"isChatModerator": false,
+								"frameId": 94,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19471017": {
+								"id": "19471017",
+								"name": "Punisher",
+								"lastLoginTime": "1707045969",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "999",
+								"isChatModerator": false,
+								"frameId": 117,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19548239": {
+								"id": "19548239",
+								"name": "AQP",
+								"lastLoginTime": "1707043273",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "900",
+								"isChatModerator": false,
+								"frameId": 112,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19573390": {
+								"id": "19573390",
+								"name": "frofro",
+								"lastLoginTime": "1707042683",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "3",
+								"commander": false,
+								"avatarId": "1029",
+								"isChatModerator": false,
+								"frameId": 37,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19604116": {
+								"id": "19604116",
+								"name": "Halilburc",
+								"lastLoginTime": "1707041391",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "174",
+								"isChatModerator": false,
+								"frameId": 3,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19620075": {
+								"id": "19620075",
+								"name": "Мариуполь",
+								"lastLoginTime": "1707019286",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "972",
+								"isChatModerator": false,
+								"frameId": 131,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19626193": {
+								"id": "19626193",
+								"name": "Mejind",
+								"lastLoginTime": "1707044041",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "810",
+								"isChatModerator": false,
+								"frameId": 70,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19631645": {
+								"id": "19631645",
+								"name": "Zaidu Sabbag",
+								"lastLoginTime": "1707026803",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "3",
+								"commander": false,
+								"avatarId": "510",
+								"isChatModerator": false,
+								"frameId": 94,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19683671": {
+								"id": "19683671",
+								"name": "X-Man",
+								"lastLoginTime": "1707044525",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "1020",
+								"isChatModerator": false,
+								"frameId": 115,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"19692694": {
+								"id": "19692694",
+								"name": "Team Toni",
+								"lastLoginTime": "1706969193",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "1253",
+								"isChatModerator": false,
+								"frameId": 115,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"20310523": {
+								"id": "20310523",
+								"name": "Jacky Chen",
+								"lastLoginTime": "1706938066",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "1055",
+								"isChatModerator": false,
+								"frameId": 51,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"28921320": {
+								"id": "28921320",
+								"name": "Ultra 7",
+								"lastLoginTime": "1707013763",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "2",
+								"commander": false,
+								"avatarId": "967",
+								"isChatModerator": false,
+								"frameId": 71,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"30135257": {
+								"id": "30135257",
+								"name": "Andrea",
+								"lastLoginTime": "1707044847",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "2",
+								"commander": false,
+								"avatarId": "693",
+								"isChatModerator": false,
+								"frameId": 3,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							},
+							"35614897": {
+								"id": "35614897",
+								"name": "Blakawesome",
+								"lastLoginTime": "1707020442",
+								"serverId": "124",
+								"level": "130",
+								"clanId": "169476",
+								"clanRole": "4",
+								"commander": false,
+								"avatarId": "609",
+								"isChatModerator": false,
+								"frameId": 11,
+								"leagueId": 3,
+								"allowPm": "all",
+								"showProfile": false,
+								"clanTitle": "Infinite Dreams",
+								"clanIcon": {
+									"flagColor1": 0,
+									"flagColor2": 19,
+									"flagShape": 14,
+									"iconColor": 3,
+									"iconShape": 47
+								}
+							}
+						},
+						"news": "https://gyume2021.github.io For reference of the game",
+						"activityPoints": 46829,
+						"dungeonPoints": 4937,
+						"blackList": {
+							"19104445": 0,
+							"19119895": 0,
+							"19188443": 0,
+							"19198483": 0,
+							"19264723": 0,
+							"19277355": 0,
+							"19314399": 0,
+							"19348327": 0,
+							"19371538": 0,
+							"19412283": 0,
+							"19442800": 0,
+							"19488101": 0,
+							"19500488": 0,
+							"19518560": 0,
+							"19581235": 0,
+							"19598505": 0,
+							"19644320": 0,
+							"19667794": 0,
+							"19688571": 0,
+							"22175748": 0,
+							"25155207": 0,
+							"32746801": 0
+						},
+						"warriors": [
+							19173950,
+							19106778,
+							19260167,
+							19604116,
+							19548239,
+							19432191,
+							19176545,
+							19257982,
+							19626193,
+							19471017,
+							19272230,
+							19620075,
+							20310523,
+							19683671,
+							19285459,
+							19188353,
+							19172175,
+							19573390,
+							35614897,
+							19119133
+						],
+						"giftsCount": 311,
+						"daysToKick": "90",
+						"league": "1"
+					},
+					"membersStat": [
+						{
+							"userId": "19106778",
+							"activitySum": 28474,
+							"todayActivity": 9226,
+							"dungeonActivitySum": 2622,
+							"todayDungeonActivity": 508,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19119133",
+							"activitySum": 10714,
+							"todayActivity": 204,
+							"dungeonActivitySum": 1759,
+							"todayDungeonActivity": 337,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19154594",
+							"activitySum": 11858,
+							"todayActivity": 0,
+							"dungeonActivitySum": 150,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19172175",
+							"activitySum": 13374,
+							"todayActivity": 988,
+							"dungeonActivitySum": 1875,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19173950",
+							"activitySum": 38276,
+							"todayActivity": 3816,
+							"dungeonActivitySum": 7034,
+							"todayDungeonActivity": 854,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19176545",
+							"activitySum": 9803,
+							"todayActivity": 0,
+							"dungeonActivitySum": 1932,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19183265",
+							"activitySum": 736,
+							"todayActivity": 736,
+							"dungeonActivitySum": 30,
+							"todayDungeonActivity": 30,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19188353",
+							"activitySum": 15574,
+							"todayActivity": 1964,
+							"dungeonActivitySum": 2055,
+							"todayDungeonActivity": 331,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19224827",
+							"activitySum": 12447,
+							"todayActivity": 1776,
+							"dungeonActivitySum": 1218,
+							"todayDungeonActivity": 174,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19257982",
+							"activitySum": 17066,
+							"todayActivity": 1012,
+							"dungeonActivitySum": 1770,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19260167",
+							"activitySum": 30188,
+							"todayActivity": 4872,
+							"dungeonActivitySum": 3600,
+							"todayDungeonActivity": 150,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19272230",
+							"activitySum": 16615,
+							"todayActivity": 2267,
+							"dungeonActivitySum": 1920,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19285459",
+							"activitySum": 10890,
+							"todayActivity": 0,
+							"dungeonActivitySum": 931,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19371481",
+							"activitySum": 9454,
+							"todayActivity": 0,
+							"dungeonActivitySum": 1585,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19413825",
+							"activitySum": 11156,
+							"todayActivity": 1256,
+							"dungeonActivitySum": 2617,
+							"todayDungeonActivity": 385,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19432191",
+							"activitySum": 14412,
+							"todayActivity": 1624,
+							"dungeonActivitySum": 1714,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19471017",
+							"activitySum": 19794,
+							"todayActivity": 1300,
+							"dungeonActivitySum": 2156,
+							"todayDungeonActivity": 308,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19548239",
+							"activitySum": 21656,
+							"todayActivity": 2246,
+							"dungeonActivitySum": 1739,
+							"todayDungeonActivity": 303,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19573390",
+							"activitySum": 16652,
+							"todayActivity": 684,
+							"dungeonActivitySum": 1529,
+							"todayDungeonActivity": 31,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19604116",
+							"activitySum": 60570,
+							"todayActivity": 5798,
+							"dungeonActivitySum": 1946,
+							"todayDungeonActivity": 359,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19620075",
+							"activitySum": 12278,
+							"todayActivity": 284,
+							"dungeonActivitySum": 1050,
+							"todayDungeonActivity": 150,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19626193",
+							"activitySum": 20196,
+							"todayActivity": 1906,
+							"dungeonActivitySum": 1920,
+							"todayDungeonActivity": 300,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19631645",
+							"activitySum": 8978,
+							"todayActivity": 1186,
+							"dungeonActivitySum": 1982,
+							"todayDungeonActivity": 239,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19683671",
+							"activitySum": 34882,
+							"todayActivity": 804,
+							"dungeonActivitySum": 1880,
+							"todayDungeonActivity": 150,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "19692694",
+							"activitySum": 9906,
+							"todayActivity": 0,
+							"dungeonActivitySum": 1378,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "20310523",
+							"activitySum": 10727,
+							"todayActivity": 0,
+							"dungeonActivitySum": 1090,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "28921320",
+							"activitySum": 10588,
+							"todayActivity": 342,
+							"dungeonActivitySum": 966,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "30135257",
+							"activitySum": 15886,
+							"todayActivity": 2106,
+							"dungeonActivitySum": 1370,
+							"todayDungeonActivity": 330,
+							"raidSum": 0,
+							"wasChampion": false
+						},
+						{
+							"userId": "35614897",
+							"activitySum": 15898,
+							"todayActivity": 432,
+							"dungeonActivitySum": 2040,
+							"todayDungeonActivity": 0,
+							"raidSum": 0,
+							"wasChampion": false
+						}
+					],
+					"stat": {
+						"todayActivity": 2267,
+						"activitySum": 16615,
+						"dungeonActivitySum": 2118,
+						"todayRaid": [],
+						"todayItemsActivity": 711,
+						"todayDungeonActivity": 0,
+						"activityForRuneAvailable": false,
+						"adventureStat": 1,
+						"clanWarStat": 0
+					},
+					"serverResetTime": 1707098400,
+					"clanWarEndSeasonTime": 1707568200,
+					"freeClanChangeInterval": {
+						"start": 1706961600,
+						"end": 1707134400
+					},
+					"giftUids": []
+				}
+			}
+		},
+		{
+			"ident": "group_2_body",
+			"result": {
+				"response": {
+					"19106778": {
+						"online": false,
+						"lastAction": "1707044542"
+					},
+					"19119133": {
+						"online": false,
+						"lastAction": "1707033393"
+					},
+					"19154594": {
+						"online": false,
+						"lastAction": "1707007592"
+					},
+					"19172175": {
+						"online": false,
+						"lastAction": "1707042687"
+					},
+					"19173950": {
+						"online": true,
+						"lastAction": "1707046290"
+					},
+					"19176545": {
+						"online": true,
+						"lastAction": "1707045162"
+					},
+					"19183265": {
+						"online": false,
+						"lastAction": "1707038425"
+					},
+					"19188353": {
+						"online": true,
+						"lastAction": "1707043704"
+					},
+					"19224827": {
+						"online": false,
+						"lastAction": "1707040182"
+					},
+					"19257982": {
+						"online": false,
+						"lastAction": "1707036095"
+					},
+					"19260167": {
+						"online": false,
+						"lastAction": "1707042491"
+					},
+					"19272230": {
+						"online": true,
+						"lastAction": "1707046284"
+					},
+					"19285459": {
+						"online": false,
+						"lastAction": "1706948822"
+					},
+					"19371481": {
+						"online": false,
+						"lastAction": "1706999545"
+					},
+					"19413825": {
+						"online": true,
+						"lastAction": "1707045034"
+					},
+					"19432191": {
+						"online": false,
+						"lastAction": "1707024278"
+					},
+					"19471017": {
+						"online": true,
+						"lastAction": "1707046271"
+					},
+					"19548239": {
+						"online": false,
+						"lastAction": "1707044409"
+					},
+					"19573390": {
+						"online": false,
+						"lastAction": "1707044446"
+					},
+					"19604116": {
+						"online": false,
+						"lastAction": "1707041484"
+					},
+					"19620075": {
+						"online": false,
+						"lastAction": "1707037064"
+					},
+					"19626193": {
+						"online": false,
+						"lastAction": "1707044070"
+					},
+					"19631645": {
+						"online": true,
+						"lastAction": "1707044483"
+					},
+					"19683671": {
+						"online": true,
+						"lastAction": "1707045897"
+					},
+					"19692694": {
+						"online": false,
+						"lastAction": "1706969696"
+					},
+					"20310523": {
+						"online": false,
+						"lastAction": "1706938760"
+					},
+					"28921320": {
+						"online": false,
+						"lastAction": "1707015200"
+					},
+					"30135257": {
+						"online": false,
+						"lastAction": "1707044980"
+					},
+					"35614897": {
+						"online": false,
+						"lastAction": "1707022643"
+					}
+				}
+			}
+		}
+	]
+}

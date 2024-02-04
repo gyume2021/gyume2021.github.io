@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/json-parsers.js"></script>
+    <title>JSON Parser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: center;
+          padding: 8px;
+        }
+
+        td.failed {
+            background-color: rgb(230, 63, 45);
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h2>Guild Member JSON Parser</h2>
+    
+    <label for="jsonInput">Enter JSON:</label>
+    <textarea id="jsonInput"></textarea>
+
+    <button onclick="parseJSON_guildmember()">Parse guild member JSON</button>
+    <button onclick="parseJSON_oshdamage()">Parse osh damage JSON</button>
+    
+    
+    <h3>Member Parsed Result:</h3>
+    <div id="guildmember_parsedResult"></div>
+    
+    <h3>Osh Damage Parsed Result:</h3>
+    <div id="oshdamage_parsedResult"></div>
+
+    <h3>Hero Strength Parsed Result:</h3>
+    <div id="herostrength_parsedResult"></div>
+
+</body>
+</html>
