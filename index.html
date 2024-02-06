@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/mysterious-island.css">
     <link rel="stylesheet" href="css/guildwar-log.css">
     <link rel="stylesheet" href="css/tutorial-slide.css">
+    <script language="javascript" src="js/serverDate.js"></script>
     <style>
         * {
           box-sizing: border-box;
@@ -75,7 +76,7 @@
           text-decoration: underline;
         }
 
-        #currentDateTime {
+        #timezone, #currentDateTime {
           text-align: center;
         }
 
@@ -201,8 +202,16 @@
 
     <div class="footer"></div>
     <p id="currentDateTime"></p>
+    <p id="timezone"></p>
+    
 
     <script>
+      console.log(serverDATE);
+      
+      var utcOffsetElement = document.getElementById('timezone');
+      var offset = -(new Date().getTimezoneOffset() / 60) 
+      utcOffsetElement.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone + " UTC: " +offset;
+
       function mapButtonClick(url) {
         window.open("map/".concat(url, ".html"));
       }
