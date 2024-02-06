@@ -75,6 +75,10 @@
           text-decoration: underline;
         }
 
+        #currentDateTime {
+          text-align: center;
+        }
+
     </style>
   </head>
   <body>
@@ -196,6 +200,7 @@
     </div>
 
     <div class="footer"></div>
+    <p id="currentDateTime"></p>
 
     <script>
       function mapButtonClick(url) {
@@ -209,6 +214,37 @@
       function cardClick(url) {
         window.open(url);
       }
+
+      // Function to update the current date, day, and time
+      function updateCurrentDateTime() {
+        // Get the current date and time
+        const now = new Date();
+        
+        // Format the date as YYYY-MM-DD
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        
+        // Get the day of the week as a string
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const dayOfWeek = days[now.getDay()];
+        
+        // Format the time as HH:MM:SS
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        // Display the date, day, and time in the HTML element
+        const currentDateTimeElement = document.getElementById('currentDateTime');
+        currentDateTimeElement.textContent = `${dayOfWeek}, ${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+      }
+      
+      // Call the updateCurrentDateTime function initially
+      updateCurrentDateTime();
+      
+      // Update the current date, day, and time every second
+      setInterval(updateCurrentDateTime, 1000);
+
     </script>
   </body>
 </html>
