@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/mysterious-island.css">
     <link rel="stylesheet" href="css/guildwar-log.css">
     <link rel="stylesheet" href="css/tutorial-slide.css">
-    <!-- <script language="javascript" src="js/serverDate.js"></script> -->
+    <script language="javascript" src="js/OSH.js"></script>
     <style>
         * {
           box-sizing: border-box;
@@ -76,8 +76,19 @@
           text-decoration: underline;
         }
 
-        #timezone, #currentDateTime {
+        #timezone, #currentDateTime, #time-left {
           text-align: center;
+        }
+
+        #debuff-tutorial {
+          display: flex; 
+          justify-content: center;
+          text-align: center;
+        }
+
+        #inline-description {
+          text-align: center;
+          font-size: 18px;
         }
 
     </style>
@@ -203,6 +214,20 @@
           </div>
         </div>
     </div>
+    <div class="horizontal-line"></div>
+    <h1 id="videos"><a href="#videos" class=title>Videos</a></h1>
+    <div id="inline-description">
+        <p>Heroes for debuff removal</p>
+        <p>source: <a href="https://www.youtube.com/watch?v=fpqdd2SZqrk" target="_blank">Cornelius' Secrets</a></p>
+    </div>
+    <div id="debuff-tutorial">
+      <video width="640" height="360" controls>
+        <!-- Specify the URL of the video file using the src attribute -->
+        <source src="video/debuffremoval-short.mp4" type="video/mp4">
+        <!-- Provide a fallback message for browsers that do not support HTML5 video -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <!-- //// -->
     <!-- Archived Mysterious Island Map -->
     <!-- //// -->
@@ -215,6 +240,7 @@
     <div class="footer"></div>
     <p id="currentDateTime"></p>
     <p id="timezone"></p>
+    <p id="time-left"></p>
     
 
     <script>
@@ -261,10 +287,11 @@
       
       // Call the updateCurrentDateTime function initially
       updateCurrentDateTime();
+      calculateTimeLeft();
       
       // Update the current date, day, and time every second
       setInterval(updateCurrentDateTime, 1000);
-
+      setInterval(calculateTimeLeft, 1000);
     </script>
   </body>
 </html>
