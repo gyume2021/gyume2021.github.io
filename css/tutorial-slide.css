@@ -19,7 +19,7 @@
 }
 
 .card:hover .card-content {
-    transform: translateY(-50%);
+    transform: translateY(-20%);
 }
 
 .card {
