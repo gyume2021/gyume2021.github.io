@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Infinite Dream s124</title>
+    <link rel="stylesheet" href="css/mysterious-island.css">
+    <link rel="stylesheet" href="css/guildwar-log.css">
+    <link rel="stylesheet" href="css/tutorial-slide.css">
+    <script language="javascript" src="js/OSH.js"></script>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: middle;
+          padding: 8px;
+        }
+
+        th.warning {
+          color: red;
+          border: 1px solid #dddddd;
+          text-align: middle;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+
+        h1 {
+            text-align: center;
+            display: block;
+        }
+
+        a {
+            text-align: center;
+            display: block;
+        }
+
+        img.slides {
+            height: 10%;
+            width: 250px;
+        }
+
+        .horizontal-line {
+            height: 2px;
+            border: 1px solid #757575;
+            margin-left: 90px;
+            margin-right: 90px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer {
+          margin-bottom: 60px;
+        }
+
+        a:link.title,  a:visited.title {
+          text-decoration: none; 
+          color: black;
+        }
+
+        a:hover.title {
+          transform: scale(1.2);
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+
+        #timezone, #currentDateTime, #time-left {
+          text-align: center;
+        }
+
+        #debuff-tutorial {
+          display: flex; 
+          justify-content: center;
+          text-align: center;
+        }
+
+        #inline-description {
+          text-align: center;
+          font-size: 18px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <!-- //// -->
+    <!-- Latest Mysterious Island Map -->
+    <!-- //// -->
+    <div class="row">
+
+      
+      <div class="map">
+        <div class="image-description">
+
+          <p>Mysterious Island Map 4</p>
+        </div>
+        <a href="https://drive.google.com/file/d/18L1coVAATMT0xSWvlj8to453Ujib6frp/view?usp=sharing" target="_blank">
+          <img src="img/map/map4-island.jpg" alt="Forest" style="width:100%">
+        </a>
+        
+      </div>        
+    </div>
+
+    <!-- //// -->
+    <!-- guild war log -->
+    <!-- //// -->
+    <!-- <a href="mysterious-island-planner.html" target="_blank">Mysterious Island Planner</a> -->
+    <div class="horizontal-line"></div>
+    <h1 id="GWLog"><a href="#GWLog" class=title>Guild War Log</a></h1>
+    <div class="guildwarlog-container">
+      <div class="button" onclick="buttonClick(this.innerHTML)">ASGARD</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">KATANA</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">KONOHA</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">Sandbox</div>
+      <div class="button" onclick="buttonClick(this.innerHTML)">Why-So-Serious</div>
+    </div>
+    <!-- //// -->
+    <!-- tutorial -->
+    <!-- //// -->
+    <div class="horizontal-line"></div>
+    <h1 id="tutorial"><a href="#tutorial" class=title>Tutorial Slides</a></h1>
+    <div class="card-container">
+        <div class="card" url="https://www.solfors.com/" onclick="cardClick(this.getAttribute('url'))">
+            <img src="img/thumb-nail/gift.png" alt="Card Image">
+            <div class="card-content">
+                  <h3>Free Gifts & pet adventure maps</h3>
+                  <p></p>
+            </div>
+        </div>
+        <div class="card" url="https://docs.google.com/presentation/d/1DebO28XwBUf4j9pOm-JZ2gZb_tmSXSE8e23kYc-r6jc/edit#slide=id.p" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/adventure.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Pet Adventure</h3>
+            <p>Pet adventure buff, hero damage type, counter and pet patronage.</p>
+          </div>
+        </div>
+        <div class="card" url="http://bit.ly/3K9X55f" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/artifact.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Hero Artifact Effect</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="card" url="https://docs.google.com/presentation/d/1OQppmCMqesDuLcTyiJSHEcfYprvp-5KOVmYzxyID_QY/edit#slide=id.p" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/grandprize.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Grand Prize</h3>
+            <p>Methods of taking advantage of lucky time to earn grand prize with higher probability.</p>
+          </div>
+        </div>
+        <div class="card" url="http://bit.ly/40kcWnt" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/osh.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Guild Raid Strategy</h3>
+            <p>Suggestion for defeating OSH 160.</p>
+          </div>
+        </div>
+        <div class="card" url="https://docs.google.com/presentation/d/1E0HMPYTIOAz3H3YWDuw_1twOac7H9TbT6sjGi1KXDao/edit#slide=id.p" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/ascension.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Ascension</h3>
+            <p>Profile of Heroes' Ascension crystal.</p>
+          </div>
+        </div>
+        <div class="card" url="http://bit.ly/42IWrCN" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/arena.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Arena Teams in Other Servers</h3>
+            <p>Only the teams on some top 50 guilds in Clash of World.</p>
+          </div>
+        </div>
+        <div class="card" url="http://bit.ly/3nlIN8A" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/GW.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Guild War</h3>
+            <p>Member's time zone and hint for defeating players on s124.</p>
+          </div>
+        </div>
+        <div class="card" url="https://hero-wars-guide.web.app/schedule" onclick="cardClick(this.getAttribute('url'))">
+          <img src="img/thumb-nail/eventschedule.png" alt="Card Image">
+          <div class="card-content">
+            <h3>Event Schedule</h3>
+            <p>Detailed quests, rewards, schedule of upcoming events.</p>
+          </div>
+        </div>
+    </div>
+    <div class="horizontal-line"></div>
+    <h1 id="videos"><a href="#videos" class=title>Videos</a></h1>
+    <div id="inline-description">
+        <p>Heroes for debuff removal</p>
+        <p>source: <a href="https://www.youtube.com/watch?v=fpqdd2SZqrk" target="_blank">Cornelius' Secrets</a></p>
+    </div>
+    <div id="debuff-tutorial">
+      <video width="640" height="360" controls>
+        <!-- Specify the URL of the video file using the src attribute -->
+        <source src="video/debuffremoval-short.mp4" type="video/mp4">
+        <!-- Provide a fallback message for browsers that do not support HTML5 video -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="inline-description">
+        <p>An Economical Way to defeat Rufus</p>
+        <p>source: Infinite Dreams</a></p>
+    </div>
+    <div id="debuff-tutorial">
+      <video width="640" height="360" controls>
+        <!-- Specify the URL of the video file using the src attribute -->
+        <source src="video/Rufus.mp4" type="video/mp4">
+        <!-- Provide a fallback message for browsers that do not support HTML5 video -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- //// -->
+    <!-- Archived Mysterious Island Map -->
+    <!-- //// -->
+    <div class="horizontal-line"></div>
+    <h1 id="PreviousMap"><a href="#PreviousMap" class=title>Archived Mysterious Island Map<br>(Can be reentered by shortcut set in Hero Wars Simulator)</a></h1>
+    <div class="guildwarlog-container">
+      <div class="button" onclick="mapButtonClick(this.innerHTML)">Map-1</div>
+      <div class="button" onclick="mapButtonClick(this.innerHTML)">Map-2</div>
+      <div class="button" onclick="mapButtonClick(this.innerHTML)">Map-3</div>
+    </div>
+
+    <div class="footer"></div>
+    <p id="currentDateTime"></p>
+    <p id="timezone"></p>
+    <p id="time-left"></p>
+    
+
+    <script>
+      
+      var utcOffsetElement = document.getElementById('timezone');
+      var offset = -(new Date().getTimezoneOffset() / 60) 
+      utcOffsetElement.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone + " UTC: " +offset;
+
+      function mapButtonClick(url) {
+        window.open("map/".concat(url, ".html"));
+      }
+
+      function buttonClick(url) {
+        window.open("guildwar-dashboard/".concat(url, ".html"));
+      }
+
+      function cardClick(url) {
+        window.open(url);
+      }
+
+      // Function to update the current date, day, and time
+      function updateCurrentDateTime() {
+        // Get the current date and time
+        const now = new Date();
+        
+        // Format the date as YYYY-MM-DD
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        
+        // Get the day of the week as a string
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const dayOfWeek = days[now.getDay()];
+        
+        // Format the time as HH:MM:SS
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        
+        // Display the date, day, and time in the HTML element
+        const currentDateTimeElement = document.getElementById('currentDateTime');
+        currentDateTimeElement.textContent = `${dayOfWeek}, ${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+      }
+      
+      // Call the updateCurrentDateTime function initially
+      updateCurrentDateTime();
+      calculateTimeLeft();
+      
+      // Update the current date, day, and time every second
+      setInterval(updateCurrentDateTime, 1000);
+      setInterval(calculateTimeLeft, 1000);
+    </script>
+  </body>
+</html>
 
