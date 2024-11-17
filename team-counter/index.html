@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-Column Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Column: Avatar Images -->
+    <div class="column left-column">
+      <p>請選擇敵方隊伍出現的英雄 Select a hero in enemy team.</p>  
+      <div id="avatar-container">
+        <!-- Avatar images will be dynamically added here -->
+      </div>
+    </div>
+
+    <!-- Middle Column: Descriptive Images -->
+    <div class="column middle-column">
+      <p>請選擇敵方隊伍 Select a enemy team.</p>
+      <div id="descriptive-container">
+      </div>
+    </div>
+
+    <!-- Right Column: Statistical Image -->
+    <div class="column right-column">
+      <p>破解隊伍 Solution to counter the selected enemy team.</p>  
+      <div id="statistical-container">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
