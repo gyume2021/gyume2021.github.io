@@ -94,22 +94,10 @@
     </style>
   </head>
   <body>
-    <!-- //// -->
-    <!-- Latest Mysterious Island Map -->
-    <!-- //// -->
-    <div class="row">
-
-      
-      <div class="map">
-        <div class="image-description">
-          <p>奧古斯都 (Augstus)</p>
-        </div>
-        <p>130~170 0 buff</p>
-        <img src="img/other/130-170.jpg" alt="Forest" style="width:45%">
-        <p>180 0 buff</p>
-        <img src="img/other/180.png" alt="Forest" style="width:45%">
-
-      </div>        
+    <div class="guildwarlog-container">
+      <div class="button" onclick="Taipei101buttonClick('OSHBoss/index.html')">OSH BOSS</div>
+      <div class="button" onclick="Taipei101buttonClick('PhantomBoss/index.html')">Phantom Boss</div>
+      <div class="button" onclick="Taipei101buttonClick('team-counter/index.html')">team counter</div>
     </div>
     <div class="horizontal-line"></div>
     <div class="row">
@@ -146,7 +134,6 @@
     <div class="horizontal-line"></div>
     <h1 id="GWLog"><a href="#GWLog" class=title>Guild War Log</a></h1>
     <div class="guildwarlog-container">
-      <div class="button" onclick="buttonClick(this.innerHTML)">OSHBOSS</div>
       <div class="button" onclick="buttonClick(this.innerHTML)">ASGARD</div>
       <div class="button" onclick="buttonClick(this.innerHTML)">KATANA</div>
       <div class="button" onclick="buttonClick(this.innerHTML)">KONOHA</div>
@@ -278,6 +265,10 @@
 
       function buttonClick(url) {
         window.open("guildwar-dashboard/".concat(url, ".html"));
+      }
+
+      function Taipei101buttonClick(url) {
+        window.open(url);
       }
 
       function cardClick(url) {
