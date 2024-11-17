@@ -1,4 +1,4 @@
-fetch('https://gyume2021.github.io/guildwar-dashboard/invert_index.json')
+fetch('https://gyume2021.github.io/team-counter/invert_index.json')
   .then(response => response.json())
   .then(data => {
     const avatars = data.avatars;
