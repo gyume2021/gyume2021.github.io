@@ -29,9 +29,9 @@ with open('herowars-log.csv', mode='r') as file:
     for row in reader:
         print (row["name"], row["hero"].split("."))
         for i in row["hero"].split("."):
-            image_hero_dict["avatars"][i].extend([row["name"]+".png"])
+            image_hero_dict["avatars"][i].extend([row["name"].zfill(4)+".png"])
 
-        image_hero_dict["descriptive"][row["name"]+".png"] =  row["name"]+"-log.png"
+        image_hero_dict["descriptive"][row["name"].zfill(4)+".png"] =  row["name"].zfill(4)+"-log.png"
         
     # Save the dictionary to a JSON file
     with open("invert_index.json", "w") as file:
