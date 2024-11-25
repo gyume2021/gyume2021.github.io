@@ -21,7 +21,7 @@ body {
 
     /* Images should scale to 100% width */
     .left-column img {
-        width: 10%; /* Image will take 100% of the container width */
+        width: 7.5%; /* Image will take 100% of the container width */
         max-width: 600px; /* Optional: set a max-width */
         height: auto; /* Maintain aspect ratio */
         border: 1px solid #ccc; /* Optional: add border */
@@ -58,14 +58,29 @@ body {
     border: 1px solid #ccc; /* Optional: add border */
     border-radius: 8px; /* Optional: rounded corners */
   }
+
+  #cow-container {
+    flex-basis: 10%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #cow-container p {
+    margin-top: 1px; 
+    margin-right: 1px; 
+    margin-bottom: 1px; 
+    margin-left: 1px;
+  }
   
   img {
     width: 100%;
     max-width: 100px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
   }
   
   img:hover {
-    border: 2px solid blue;
+    border: 2px solid rgb(255, 0, 0);
   }

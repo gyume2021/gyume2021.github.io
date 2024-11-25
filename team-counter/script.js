@@ -8,6 +8,7 @@ fetch('https://gyume2021.github.io/team-counter/invert_index.json')
     const avatarContainer = document.getElementById('avatar-container');
     Object.keys(avatars).forEach(avatar => {
       const img = document.createElement('img');
+      console.log(avatar);
       img.src = `avatars/${avatar}.png`;
       img.alt = avatar;
       img.addEventListener('click', () => displayDescriptiveImages(avatar, avatars, descriptiveMap));
