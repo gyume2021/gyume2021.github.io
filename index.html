@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="css/guildwar-log.css">
     <link rel="stylesheet" href="css/tutorial-slide.css">
     <script language="javascript" src="js/OSH.js"></script>
-    <link href="https://clownfish-app-hd3eu.ondigitalocean.app/dist/Artalk.css" rel="stylesheet" />
-    <!-- JS -->
-    <script src="https://clownfish-app-hd3eu.ondigitalocean.app/dist/Artalk.js"></script>
     <style>
         * {
           box-sizing: border-box;
@@ -98,11 +95,17 @@
   </head>
   <body>
     <div class="guildwarlog-container">
-      <div class="button" onclick="Taipei101buttonClick('OSHBoss/index.html')">舊升天王奧許160級攻擊隊伍<br>Teams for OSH 160</div>
-      <div class="button" onclick="Taipei101buttonClick('PhantomBoss/index.html')">新升天王160級攻擊隊伍<br>Teams for Phantom Orchestra 160</div>
-      <div class="button" onclick="Taipei101buttonClick('team-counter/index.html')">英雄隊伍攻擊建議指南<br>Team counter suggestion</div>
+
+        <!-- <img src="img/thumb-nail/gift.png" alt="Card Image"> -->
+        <div class="button" onclick="Taipei101buttonClick('OSHBoss/index.html')">舊升天王奧許160級攻擊隊伍<br>Teams for OSH 160</div>
+        <!-- <img src="img/thumb-nail/gift.png" alt="Card Image"> -->
+        <div class="button" onclick="Taipei101buttonClick('PhantomBoss/index.html')">新升天王160級攻擊隊伍<br>Teams for Phantom Orchestra 160</div>
+
+        <!-- <img src="img/thumb-nail/gift.png" alt="Card Image"> -->
+        <div class="button" onclick="Taipei101buttonClick('team-counter/index.html')">英雄隊伍攻擊建議指南<br>Team counter suggestion</div>
+
     </div>
-    <div class="horizontal-line"></div>
+    <!-- <div class="horizontal-line"></div>
     <div class="row">
 
 
@@ -128,13 +131,13 @@
         </a>
         
       </div>        
-    </div>
+    </div> -->
 
     <!-- //// -->
     <!-- guild war log -->
     <!-- //// -->
     <!-- <a href="mysterious-island-planner.html" target="_blank">Mysterious Island Planner</a> -->
-    <div class="horizontal-line"></div>
+    <!-- <div class="horizontal-line"></div>
     <h1 id="GWLog"><a href="#GWLog" class=title>Guild War Log</a></h1>
     <div class="guildwarlog-container">
       <div class="button" onclick="buttonClick(this.innerHTML)">ASGARD</div>
@@ -142,7 +145,7 @@
       <div class="button" onclick="buttonClick(this.innerHTML)">KONOHA</div>
       <div class="button" onclick="buttonClick(this.innerHTML)">Sandbox</div>
       <div class="button" onclick="buttonClick(this.innerHTML)">Why-So-Serious</div>
-    </div>
+    </div> -->
     <!-- //// -->
     <!-- tutorial -->
     <!-- //// -->
@@ -177,32 +180,11 @@
             <p>Methods of taking advantage of lucky time to earn grand prize with higher probability.</p>
           </div>
         </div>
-        <div class="card" url="http://bit.ly/40kcWnt" onclick="cardClick(this.getAttribute('url'))">
-          <img src="img/thumb-nail/osh.png" alt="Card Image">
-          <div class="card-content">
-            <h3>Guild Raid Strategy</h3>
-            <p>Suggestion for defeating OSH 160.</p>
-          </div>
-        </div>
         <div class="card" url="https://docs.google.com/presentation/d/1E0HMPYTIOAz3H3YWDuw_1twOac7H9TbT6sjGi1KXDao/edit#slide=id.p" onclick="cardClick(this.getAttribute('url'))">
           <img src="img/thumb-nail/ascension.png" alt="Card Image">
           <div class="card-content">
             <h3>Ascension</h3>
             <p>Profile of Heroes' Ascension crystal.</p>
-          </div>
-        </div>
-        <div class="card" url="http://bit.ly/42IWrCN" onclick="cardClick(this.getAttribute('url'))">
-          <img src="img/thumb-nail/arena.png" alt="Card Image">
-          <div class="card-content">
-            <h3>Arena Teams in Other Servers</h3>
-            <p>Only the teams on some top 50 guilds in Clash of World.</p>
-          </div>
-        </div>
-        <div class="card" url="http://bit.ly/3nlIN8A" onclick="cardClick(this.getAttribute('url'))">
-          <img src="img/thumb-nail/GW.png" alt="Card Image">
-          <div class="card-content">
-            <h3>Guild War</h3>
-            <p>Member's time zone and hint for defeating players on s124.</p>
           </div>
         </div>
         <div class="card" url="https://hero-wars-guide.web.app/schedule" onclick="cardClick(this.getAttribute('url'))">
@@ -242,13 +224,6 @@
     <!-- //// -->
     <!-- Archived Mysterious Island Map -->
     <!-- //// -->
-    <div class="horizontal-line"></div>
-    <h1 id="PreviousMap"><a href="#PreviousMap" class=title>Archived Mysterious Island Map<br>(Can be reentered by shortcut set in Hero Wars Simulator)</a></h1>
-    <div class="guildwarlog-container">
-      <div class="button" onclick="mapButtonClick(this.innerHTML)">Map-1</div>
-      <div class="button" onclick="mapButtonClick(this.innerHTML)">Map-2</div>
-      <div class="button" onclick="mapButtonClick(this.innerHTML)">Map-33</div>
-    </div>
 
     <div class="footer"></div>
     <p id="currentDateTime"></p>
@@ -256,15 +231,6 @@
     <p id="time-left"></p>
     
     <div id="Comments"></div>
-    <script>
-    Artalk.init({
-      el:        '#Comments',                       // 绑定元素的 Selector
-      pageKey:   '/post/1',                         // 固定链接
-      pageTitle: '关于引入 Artalk 的这档子事',         // 页面标题 (留空自动获取)
-      server:    'https://clownfish-app-hd3eu.ondigitalocean.app',  // 后端地址
-      site:      'Artalk 的博客',                    // 你的站点名
-    })
-    </script>
 
     <script>
       
